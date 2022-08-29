@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@500&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: rgb(34, 187, 214);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heading {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  font-size: 1.3rem;
+  padding-top: 1.2rem;
+}
+.input-pass {
+  margin-top: 1.5rem;
+}
+
+.input-div input {
+  position: relative;
+  width: 500px;
+  height: 35px;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 3px 7px 19px -6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 7px 19px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 7px 19px -6px rgba(0, 0, 0, 0.75);
+  outline: none;
+  padding: 0.5rem;
+  margin-left: 25rem;
+  margin-top: 5rem;
+  font-size: large;
+}
+
+.show {
+  position: absolute;
+  top: 170px;
+  right: 480px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: rgba(0, 0, 0, 0.1);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.show::before {
+  content: "\f06e";
+  font-family: fontAwesome;
+  color: black;
+}
+
+.hide::before {
+  content: "\f070";
+  font-family: fontAwesome;
+}
+.auth {
+  margin-left: 25rem;
+  margin-top: 4rem;
+  letter-spacing: 0.2rem;
   color: white;
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  box-shadow: 3px 7px 19px -6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 7px 19px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 7px 19px -6px rgba(0, 0, 0, 0.75);
+}
+.list {
+  padding: 8px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.auth .list li {
+  position: relative;
+  list-style: none;
+  font-size: 16px;
+  padding: 5px;
+}
+.auth .list li.valid {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.auth .list li.valid::before {
+  content: "\f00c";
+  color: #0f0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth .list li::before {
+  content: "\f192";
+  font-family: fontAwesome;
+  width: 20px;
+  margin-right: 5px;
+  height: 10px;
+  display: inline-flex;
 }
